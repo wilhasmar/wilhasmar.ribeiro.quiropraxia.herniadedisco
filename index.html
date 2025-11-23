@@ -1,140 +1,229 @@
-
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Wilhasmar Ribeiro - Quiropraxista</title>
-<style>
-body{font-family:Arial,sans-serif;margin:0;background:#f4f7fb;}
-header{background:#0b3058;color:white;text-align:center;padding:30px;position:relative;overflow:hidden;}
-header::after{content:"";position:absolute;top:0;left:0;width:100%;height:100%;
-background:linear-gradient(135deg,rgba(255,255,255,0.1),rgba(0,0,0,0.2));mix-blend-mode:overlay;animation:shine 6s infinite linear;}
-@keyframes shine{0%{transform:translateX(-100%);}100%{transform:translateX(100%);}}
-
-.header-logo{height:140px;margin-bottom:20px;}
-
-.container{max-width:1100px;margin:auto;padding:20px;}
-.section{margin-top:30px;}
-.card{background:white;padding:20px;border-radius:14px;box-shadow:0 8px 24px rgba(0,0,0,0.15);margin-top:20px;}
-
-.carousel{display:flex;overflow-x:auto;gap:16px;scroll-snap-type:x mandatory;padding:10px;}
-.carousel img{height:200px;border-radius:12px;scroll-snap-align:center;}
-
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:15px;}
-.gallery img{width:100%;border-radius:12px;}
-
-.video-frame{width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;}
-
-.qr-img{width:360px;display:block;margin:auto;border-radius:12px;}
-
-.btn{background:#12c2c8;padding:14px 22px;border-radius:12px;color:white;text-decoration:none;font-weight:bold;display:inline-block;margin-top:10px;}
-
-.fab-wa,.fab-ag{position:fixed;right:20px;width:70px;height:70px;border-radius:50%;
-display:flex;align-items:center;justify-content:center;font-size:32px;color:white;text-decoration:none;
-box-shadow:0 10px 30px rgba(0,0,0,0.25);}
-.fab-wa{bottom:20px;background:#25D366;}
-.fab-ag{bottom:110px;background:#0b3058;}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wilhasmar Ribeiro — Quiropraxista · Hérnia de Disco</title>
+  <meta name="description" content="Wilhasmar Ribeiro - Quiropraxista. Tratamento para hérnia de disco, dor lombar e reabilitação funcional. Agende online." />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;900&family=Playfair+Display:wght@600;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --primary:#052d4f;
+      --accent:#15bfb0;
+      --muted:#748089;
+      --card:#ffffff;
+      --bg:#f6f9fb;
+      --radius:14px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Montserrat,system-ui,Arial,sans-serif;background:var(--bg);color:#072033;-webkit-font-smoothing:antialiased}
+    a{color:inherit}
+    header{
+      background:linear-gradient(90deg,rgba(5,45,79,0.95),rgba(5,45,79,0.85));
+      color:#fff;padding:22px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;
+    }
+    .brand{display:flex;gap:16px;align-items:center}
+    .brand img{height:64px;border-radius:8px;object-fit:contain;background:#fff;padding:6px}
+    .brand h1{font-family:'Playfair Display',serif;margin:0;font-size:20px;font-weight:700;letter-spacing:0.6px}
+    .brand p{margin:0;font-size:13px;opacity:0.9}
+    nav a{color:rgba(255,255,255,0.9);margin-left:14px;text-decoration:none;font-weight:600}
+    .container{max-width:1200px;margin:32px auto;padding:0 18px}
+    /* HERO */
+    .hero{
+      display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;
+    }
+    .hero-card{
+      background:linear-gradient(180deg,#fff, #fbfdff);
+      border-radius:20px;padding:34px;box-shadow:0 8px 40px rgba(4,23,38,0.06);
+    }
+    .hero h2{font-family:'Playfair Display',serif;font-size:36px;margin:0 0 10px;color:var(--primary);line-height:1.02}
+    .hero p.lead{color:var(--muted);margin:0 0 18px;font-size:16px}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+    .btn-primary{background:var(--primary);color:#fff;padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:800;box-shadow:0 8px 18px rgba(5,45,79,0.12)}
+    .btn-ghost{background:transparent;border:2px solid #e6eef1;padding:12px 16px;border-radius:12px;text-decoration:none;font-weight:700;color:var(--primary)}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
+    .feature{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 20px rgba(9,30,40,0.04);text-align:center}
+    .feature h4{margin:8px 0 0;font-size:15px;color:var(--primary)}
+    /* Aside (QR / contato) */
+    .aside-card{background:linear-gradient(180deg,#072a45, #093a5c);color:#fff;padding:22px;border-radius:16px;display:flex;flex-direction:column;gap:14px}
+    .aside-card img{width:100%;border-radius:10px;background:#fff;padding:8px}
+    .aside-card .phone{font-weight:800;font-size:16px}
+    /* Sobre */
+    #sobre{margin-top:28px;background:linear-gradient(180deg,#fff,#fbfdff);padding:28px;border-radius:14px;box-shadow:0 8px 40px rgba(4,23,38,0.04)}
+    #sobre h3{font-family:'Playfair Display',serif;font-size:34px;margin:0 0 8px;color:var(--primary)}
+    #sobre p{color:var(--muted);max-width:780px}
+    /* Serviços tipo botões com ícones */
+    #servicos{margin-top:20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    .service-btn{display:flex;gap:12px;align-items:center;padding:14px;border-radius:12px;background:#fff;border:1px solid #e9f0f2;text-decoration:none;color:var(--primary);font-weight:700;box-shadow:0 8px 24px rgba(7,20,30,0.03)}
+    .service-btn .icon{width:44px;height:44px;border-radius:10px;background:linear-gradient(180deg,var(--accent),#05a397);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800}
+    /* Depoimentos em coluna */
+    .testimonials{margin-top:26px;display:grid;grid-template-columns:1fr;gap:12px}
+    .test-card{background:#fff;padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(9,30,40,0.04);display:flex;gap:12px;align-items:flex-start}
+    .test-card img{width:64px;height:64px;border-radius:50%;object-fit:cover}
+    .test-card p{margin:0;color:var(--muted);font-size:15px}
+    .test-card strong{color:var(--primary);display:block;margin-bottom:6px}
+    /* Galeria / rodapé */
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-top:16px}
+    .gallery img{width:100%;height:120px;object-fit:cover;border-radius:10px}
+    footer{margin-top:34px;padding:24px;text-align:center;color:var(--muted);font-size:14px}
+    /* Responsive */
+    @media(max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .features{grid-template-columns:repeat(2,1fr)}
+      header{padding:16px}
+    }
+    @media(max-width:560px){
+      .features{grid-template-columns:1fr}
+    }
+  </style>
 </head>
-
 <body>
-
-<header>
-<img src="card-main.png" class="header-logo">
-<h1>Wilhasmar Ribeiro - Quiropraxista</h1>
-<p>Especialista em Hérnia de Disco e Dor Lombar</p>
-</header>
-
-<div class="container">
-
-<!-- SOBRE MIM -->
-<div class="section card">
-<h2>Sobre Mim</h2>
-<p>Sou Wilhasmar Ribeiro, profissional especializado em Quiropraxia, tratamento de Hérnia de Disco,
-dores da coluna e reabilitação funcional. Minha missão é devolver mobilidade, reduzir dor e
-restaurar a qualidade de vida com técnicas modernas e personalizadas.</p>
-</div>
-
-<!-- SERVIÇOS -->
-<div class="section card">
-<h2>Serviços</h2>
-<ul>
-<li>Tratamento de Hérnia de Disco</li>
-<li>Realinhamento da Coluna</li>
-<li>Descompressão Vertebral</li>
-<li>Tratamento da Ciatalgia</li>
-<li>Terapia Manual Avançada</li>
-<li>Reabilitação Funcional</li>
-</ul>
-</div>
-
-<!-- DEPOMENTOS CARROSSEL -->
-<div class="section card">
-<h2>Depoimentos</h2>
-<div class="carousel">
-<img src="card-main.png">
-<img src="card-qr.png">
-<img src="card-main.png">
-</div>
-</div>
-
-
-<!-- DEPOMENTOS CARROSSEL REAL -->
-<section id="depoimentos" class="card section">
-  <h2>Depoimentos de Pacientes</h2>
-
-  <div class="carousel" style="display:flex;overflow-x:auto;gap:16px;scroll-snap-type:x mandatory;padding:12px 6px;">
-    <div style="min-width:320px; flex:0 0 auto; scroll-snap-align:center; border-radius:12px; overflow:hidden; box-shadow:0 8px 20px rgba(0,0,0,0.08); background:white;">
-      <img src="depoimento1.png" alt="Depoimento 1" style="width:100%; display:block;">
+  <header>
+    <div class="brand">
+      <!-- LOGO: substitua pelo seu arquivo -->
+      <img src="card-main.png" alt="Wilhasmar Ribeiro - logo">
+      <div>
+        <h1>Wilhasmar Ribeiro</h1>
+        <p>Quiropraxista · Especialista em Coluna</p>
+      </div>
     </div>
 
-    <div style="min-width:320px; flex:0 0 auto; scroll-snap-align:center; border-radius:12px; overflow:hidden; box-shadow:0 8px 20px rgba(0,0,0,0.08); background:white;">
-      <img src="depoimento2.png" alt="Depoimento 2" style="width:100%; display:block;">
-    </div>
+    <nav>
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
 
-    <div style="min-width:320px; flex:0 0 auto; scroll-snap-align:center; border-radius:12px; overflow:hidden; box-shadow:0 8px 20px rgba(0,0,0,0.08); background:white;">
-      <img src="depoimento3.png" alt="Depoimento 3" style="width:100%; display:block;">
-    </div>
-  </div>
+  <main class="container">
+    <section class="hero">
+      <div class="hero-card">
+        <h2>Recupere sua mobilidade — Tratamento para Hérnia de Disco</h2>
+        <p class="lead">Atendimento humanizado com técnicas de quiropraxia, descompressão vertebral e reabilitação funcional. Protocolos personalizados e baseados em evidências.</p>
 
-  <div style="text-align:center; margin-top:10px;">
-    <button onclick="document.querySelector('#depoimentos .carousel').scrollBy({left:-340, behavior:'smooth'})" style="margin-right:8px;">◀</button>
-    <button onclick="document.querySelector('#depoimentos .carousel').scrollBy({left:340, behavior:'smooth'})">▶</button>
-  </div>
-</section>
+        <div class="cta-row">
+          <a class="btn-primary" href="https://ng.quarkclinic.com.br/app/profissional-saude/agendamentos" target="_blank">Agendar consulta</a>
+          <a class="btn-ghost" href="#depoimentos">Ver depoimentos</a>
+        </div>
 
+        <div class="features" aria-hidden="false">
+          <div class="feature">
+            <svg width="28" height="28" fill="none" aria-hidden style="display:block;margin:0 auto"><rect width="28" height="28" rx="6" fill="#f1fbfa"/></svg>
+            <h4>Avaliação especializada</h4>
+            <div style="color:var(--muted);font-size:13px;margin-top:6px">Exame funcional e plano de tratamento.</div>
+          </div>
+          <div class="feature">
+            <svg width="28" height="28" fill="none" aria-hidden style="display:block;margin:0 auto"><rect width="28" height="28" rx="6" fill="#f1fbfa"/></svg>
+            <h4>Descompressão</h4>
+            <div style="color:var(--muted);font-size:13px;margin-top:6px">Técnicas manuais e mecânicas avançadas.</div>
+          </div>
+          <div class="feature">
+            <svg width="28" height="28" fill="none" aria-hidden style="display:block;margin:0 auto"><rect width="28" height="28" rx="6" fill="#f1fbfa"/></svg>
+            <h4>Reabilitação</h4>
+            <div style="color:var(--muted);font-size:13px;margin-top:6px">Exercícios terapêuticos e educação postural.</div>
+          </div>
+        </div>
 
-<!-- GALERIA -->
-<div class="section card">
-<h2>Galeria</h2>
-<div class="gallery">
-<img src="card-main.png">
-<img src="card-qr.png">
-<img src="card-main.png">
-<img src="card-qr.png">
-</div>
-</div>
+        <!-- Serviços (botões com ícones) -->
+        <div id="servicos">
+          <a class="service-btn" href="#">
+            <div class="icon">HD</div>
+            <div>
+              <div style="font-size:15px">Hérnia de Disco</div>
+              <div style="color:var(--muted);font-size:13px;margin-top:6px">Tratamento conservador e retorno seguro às atividades.</div>
+            </div>
+          </a>
 
-<!-- VIDEOS FIXOS -->
-<div class="section card">
-<h2>Vídeos</h2>
-<div class="video-frame">
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/kyhAbDrFNFY" frameborder="0" allowfullscreen></iframe>
-</div>
-</div>
+          <a class="service-btn" href="#">
+            <div class="icon">DV</div>
+            <div>
+              <div style="font-size:15px">Descompressão Vertebral</div>
+              <div style="color:var(--muted);font-size:13px;margin-top:6px">Alívio de pressão e dor.</div>
+            </div>
+          </a>
 
-<!-- CONTATO -->
-<div class="section card">
-<h2>Escaneie para WhatsApp / Instagram</h2>
-<img src="card-qr.png" class="qr-img">
-<p style="text-align:center;margin-top:10px;"><strong>WhatsApp:</strong> (69) 98483-1097</p>
-</div>
+          <a class="service-btn" href="#">
+            <div class="icon">RF</div>
+            <div>
+              <div style="font-size:15px">Reabilitação Funcional</div>
+              <div style="color:var(--muted);font-size:13px;margin-top:6px">Força, controle e prevenção de recidivas.</div>
+            </div>
+          </a>
 
-</div>
+          <a class="service-btn" href="#">
+            <div class="icon">CI</div>
+            <div>
+              <div style="font-size:15px">Ciatalgia</div>
+              <div style="color:var(--muted);font-size:13px;margin-top:6px">Tratamento da dor irradiada e melhora da função.</div>
+            </div>
+          </a>
+        </div>
+      </div>
 
-<a class="fab-ag" href="https://ng.quarkclinic.com.br/app/profissional-saude/agendamentos" target="_blank">📅</a>
-<a class="fab-wa" href="https://wa.me/5569984831097" target="_blank">📱</a>
+      <aside class="aside-card">
+        <!-- QR card / contato -->
+        <img src="card-qr.png" alt="QR Code - WhatsApp / Instagram">
+        <div>
+          <div class="phone">WhatsApp: <a href="https://wa.me/5569984831097" style="color:#fff;text-decoration:underline">(69) 98483-1097</a></div>
+          <div style="color:rgba(255,255,255,0.9);margin-top:6px">@WILHAS_QUIROPraxista</div>
+        </div>
+      </aside>
+    </section>
 
+    <!-- SOBRE (fonte mais chamativa) -->
+    <section id="sobre">
+      <h3>Sobre Mim — Wilhasmar Ribeiro</h3>
+      <p>Sou quiropraxista especializado em coluna e reabilitação de pacientes com hérnia de disco. Trabalho com protocolos individualizados para aliviar dor, recuperar função e evitar recidivas — sempre com abordagem humana e segura.</p>
+    </section>
+
+    <!-- Depoimentos em coluna (cartões) -->
+    <section id="depoimentos" class="testimonials" aria-label="Depoimentos">
+      <div class="test-card">
+        <img src="depoimento1.png" alt="Foto paciente">
+        <div>
+          <strong>Leidiany Brito</strong>
+          <p>Passei por vários profissionais antes, mas só tive resultado com o Dr. Wilhas. Ele explica tudo, trata com precisão e muita segurança. Um especialista em coluna de altíssimo nível!</p>
+        </div>
+      </div>
+
+      <div class="test-card">
+        <img src="depoimento2.png" alt="Foto paciente">
+        <div>
+          <strong>Geraldo R.</strong>
+          <p>Estava com a coluna travada, na segunda sessão totalmente sem dor.. ainda me ensinou como fazer para não travar novamente.</p>
+        </div>
+      </div>
+
+      <div class="test-card">
+        <img src="depoimento3.png" alt="Foto paciente">
+        <div>
+          <strong>Estefani Santana</strong>
+          <p>Fiquei impressionada, na primeira sessão tive 95% de melhorias, olha que estava há 2 meses com dores intensas. Super recomendo.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galeria pequena -->
+    <section class="gallery" aria-hidden="false">
+      <img src="card-main.png" alt="Imagem da clínica / logo">
+      <img src="card-qr.png" alt="QR code">
+      <img src="depoimento1.png" alt="Depoimento">
+    </section>
+
+    <!-- Contato simples -->
+    <section id="contato" style="margin-top:22px;background:#fff;padding:18px;border-radius:12px;box-shadow:0 8px 30px rgba(9,30,40,0.04)">
+      <h4 style="margin:0 0 8px;font-weight:800;color:var(--primary)">Contato</h4>
+      <p style="margin:0;color:var(--muted)">Agende pelo WhatsApp: <a href="https://wa.me/5569984831097">+55 69 98483-1097</a> — Se preferir, use o botão de agendamento.</p>
+    </section>
+
+    <footer>
+      © <span id="yr"></span> Wilhasmar Ribeiro • Desenvolvido com cuidado
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
