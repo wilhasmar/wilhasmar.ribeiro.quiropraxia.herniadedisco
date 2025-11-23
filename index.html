@@ -90,13 +90,41 @@
 @media(max-width:520px){
   #floating-qr{display:none;}
 }
+
+/* Mobile improvements */
+@media (max-width: 880px) {
+  body{background-attachment:scroll;background-size:120%;}
+  .hero{grid-template-columns:1fr;gap:18px;}
+  .hero-card{padding:20px;border-radius:16px;}
+  .hero h2{font-size:28px;}
+  .lead{font-size:15px;}
+  .cta-row{flex-direction:column;gap:10px;}
+  .btn-primary, .btn-ghost{width:100%;padding:14px;border-radius:12px;}
+  #servicos .service-btn{padding:12px;}
+  .testimonials-grid{grid-template-columns:1fr;}
+  .gallery img, .test-card img{width:56px;height:56px;}
+  #qr-below{margin:18px 12px;padding:16px;max-width:100%;}
+  /* reduce heavy background visibility on mobile for clarity */
+  body{background-image:none;}
+}
+
+/* Tap target and readability improvements */
+@media (max-width:520px){
+  .brand img{height:52px;}
+  header{padding:12px;}
+  .hero h2{font-size:22px;}
+  .lead{font-size:14px;}
+  .test-card p{font-size:14px;}
+  .gallery img{height:100px;}
+}
+
 </style>
 </head>
 <body>
   <header>
     <div class="brand">
       <!-- LOGO: substitua pelo seu arquivo -->
-      <img src="card-main.png" alt="Wilhasmar Ribeiro - logo">
+      <img src="card-main.png" alt="Wilhasmar Ribeiro - logo" loading="lazy">
       <div>
         <h1>Wilhasmar Ribeiro</h1>
         <p>Quiropraxista · Especialista em Coluna</p></div>
@@ -123,7 +151,7 @@
         <p class="lead">Atendimento humanizado com técnicas de quiropraxia, descompressão vertebral e reabilitação funcional. Protocolos personalizados e baseados em evidências.</p>
 
         <div class="cta-row">
-          <a class="btn-primary" href="https://ng.quarkclinic.com.br/app/profissional-saude/agendamentos" target="_blank">Agendar consulta</a>
+          <a class="btn-primary" href="https://ng.quarkclinic.com.br/app/profissional-saude/agendamentos" target="_blank" aria-label="Agendar consulta">Agendar consulta</a>
           <a class="btn-ghost" href="#depoimentos">Ver depoimentos</a>
         </div>
 
@@ -203,7 +231,7 @@
 
     <img src="68f51f6b26d20f2f20fcd0e5cec75101_0.jpeg"
          style="width:240px;border-radius:14px;object-fit:contain;background:#000;
-                box-shadow:0 4px 14px rgba(0,0,0,0.15);">
+                box-shadow:0 4px 14px rgba(0,0,0,0.15);" loading="lazy">
   </div>
 
 </section>
@@ -236,7 +264,7 @@
 <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:14px;
             box-shadow:0 6px 20px rgba(0,0,0,0.15); margin-bottom:20px;">
   <video controls playsinline poster="poster_optimized.jpeg"
-         style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:14px;object-fit:contain;background:#000;">
+         style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:14px;object-fit:contain;background:#000;" preload="metadata">
     <source src="2025-10-22-170540322.mp4" type="video/mp4">
     Seu navegador não suporta vídeo HTML5.
   </video>
@@ -245,21 +273,21 @@
   <h3 style="color:var(--dark-green);margin-bottom:8px">Depoimentos</h3>
   <div class="testimonials-grid">
 <div class="test-card" style="--i:0; animation-delay: calc(var(--i) * 0.12s)">
-        <img src="depoimento1.png" alt="Foto paciente">
+        <img src="depoimento1.png" alt="Foto paciente" loading="lazy">
         <div>
           <strong>Leidiany Brito</strong>
           <p>Passei por vários profissionais antes, mas só tive resultado com o Dr. Wilhas. Ele explica tudo, trata com precisão e muita segurança. Um especialista em coluna de altíssimo nível!</p>
         </div>
       </div>
 <div class="test-card" style="--i:1; animation-delay: calc(var(--i) * 0.12s)">
-        <img src="depoimento2.png" alt="Foto paciente">
+        <img src="depoimento2.png" alt="Foto paciente" loading="lazy">
         <div>
           <strong>Geraldo R.</strong>
           <p>Estava com a coluna travada, na segunda sessão totalmente sem dor.. ainda me ensinou como fazer para não travar novamente.</p>
         </div>
       </div>
 <div class="test-card" style="--i:2; animation-delay: calc(var(--i) * 0.12s)">
-        <img src="depoimento3.png" alt="Foto paciente">
+        <img src="depoimento3.png" alt="Foto paciente" loading="lazy">
         <div>
           <strong>Estefani Santana</strong>
           <p>Fiquei impressionada, na primeira sessão tive 95% de melhorias, olha que estava há 2 meses com dores intensas. Super recomendo.</p>
@@ -285,7 +313,7 @@
   </div>
   <div style="background:#ffffff;padding:18px;border-radius:14px;display:inline-block;">
     <img src="card-qr.png" alt="QR Code" 
-         style="display:block;width:260px;height:260px;object-fit:contain;">
+         style="display:block;width:260px;height:260px;object-fit:contain;" loading="lazy">
   </div>
 </div>
 
