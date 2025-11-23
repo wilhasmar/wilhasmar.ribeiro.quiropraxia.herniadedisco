@@ -64,7 +64,7 @@
     .test-card strong{color:var(--primary);display:block;margin-bottom:6px}
     /* Galeria / rodapé */
     .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-top:16px}
-    .gallery img{width:100%;height:120px;object-fit:cover;border-radius:10px}
+    .gallery img{width:100%;height:120px;object-fit:contain;background:#000;border-radius:10px}
     footer{margin-top:34px;padding:24px;text-align:center;color:var(--muted);font-size:14px}
     /* Responsive */
     @media(max-width:980px){
@@ -202,7 +202,7 @@
     <div style="max-width:330px;color:#748089;font-size:16px;line-height:1.5;">Sou quiropraxista especializado em coluna e na reabilitação de pacientes com hérnia de disco, tendinites e fascite plantar. Minha missão é devolver sua liberdade de movimento e eliminar dores que limitam sua rotina. <br><br>Ao longo dos anos, me especializei em protocolos individualizados, cuidadosamente planejados para cada paciente — porque cada corpo reage de um jeito. Meu foco é proporcionar alívio rápido, recuperação funcional completa e prevenção de novas crises, sempre com uma abordagem humana, segura e baseada em evidências científicas. <br><br>Se você busca um tratamento eficaz, acolhedor e que realmente melhora sua qualidade de vida, estou aqui para ajudar.</div>
 
     <img src="68f51f6b26d20f2f20fcd0e5cec75101_0.jpeg"
-         style="width:240px;border-radius:14px;object-fit:cover;
+         style="width:240px;border-radius:14px;object-fit:contain;background:#000;
                 box-shadow:0 4px 14px rgba(0,0,0,0.15);">
   </div>
 
@@ -231,6 +231,16 @@
   </div>
 </section>
 
+
+<h3 style="font-family:Playfair Display, serif; font-size:26px; color:#0B4B84; margin-top:18px; margin-bottom:10px">Tratamentos — Resultado do Primeiro Procedimento</h3>
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:14px;
+            box-shadow:0 6px 20px rgba(0,0,0,0.15); margin-bottom:20px;">
+  <video controls playsinline poster="poster_optimized.jpeg"
+         style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:14px;object-fit:contain;background:#000;">
+    <source src="2025-10-22-170540322.mp4" type="video/mp4">
+    Seu navegador não suporta vídeo HTML5.
+  </video>
+</div>
 <section id="depoimentos" class="testimonials" aria-label="Depoimentos">
   <h3 style="color:var(--dark-green);margin-bottom:8px">Depoimentos</h3>
   <div class="testimonials-grid">
