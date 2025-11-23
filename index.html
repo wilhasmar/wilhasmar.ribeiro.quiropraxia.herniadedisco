@@ -1,156 +1,17 @@
+
 <!doctype html>
 <html lang="pt-br">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta charset="utf-8"/>
 <title>Wilhasmar Ribeiro - Quiropraxista</title>
-<style>
-:root{ --primaria: #0b3058; --accent: #12c2c8; --silver: #e9eef3; --bg: #f4f7fb; --text: #0f1724; }
-*{box-sizing:border-box}
-body{font-family:Inter, system-ui, -apple-system, Arial, sans-serif; margin:0; background:var(--bg); color:var(--text);}
-.header{ background: linear-gradient(180deg,var(--primaria),#072f52 60%); padding:36px 20px; color:white; text-align:center; position:relative; overflow:hidden; }
-.header-inner{ max-width:1100px; margin:0 auto; display:flex; gap:16px; align-items:center; justify-content:center; flex-wrap:wrap; }
-.header-logo{ height:96px; width:auto; display:block; margin-right:12px; filter:drop-shadow(0 6px 18px rgba(0,0,0,0.35)); }
-.header-title h1{ font-size:28px; margin:0; letter-spacing:1px; }
-.header-title p{ margin:4px 0 0; opacity:0.95; color:var(--silver); }
-nav{ background:transparent; display:flex; justify-content:center; gap:16px; padding:14px 8px; }
-nav a{ color:white; text-decoration:none; font-weight:600; padding:8px 12px; border-radius:10px; background:rgba(255,255,255,0.04); }
-
-.container{ max-width:1100px; margin:28px auto; padding:0 18px; }
-
-.grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px; }
-.card{ background:white; border-radius:14px; padding:18px; box-shadow:0 6px 20px rgba(8,15,30,0.06); }
-
-h2{ color:var(--primaria); margin-top:0; }
-.service-title{ color:var(--primaria); font-weight:700; margin-bottom:6px; }
-.lead{ color:#334155; }
-
-.video-frame{ width:100%; aspect-ratio:16/9; background:#000; border-radius:10px; overflow:hidden; box-shadow:0 8px 30px rgba(2,6,23,0.08); }
-
-.cta-row{ display:flex; gap:12px; flex-wrap:wrap; margin-top:12px; align-items:center; justify-content:center; }
-.btn{ display:inline-block; background:var(--accent); color:white; padding:12px 18px; border-radius:12px; text-decoration:none; font-weight:700; box-shadow:0 8px 20px rgba(18,194,200,0.15); }
-
-.depoimentos{ display:flex; flex-direction:column; gap:12px; }
-.depo{ background:linear-gradient(180deg,white,#f7fbfe); padding:14px; border-radius:10px; box-shadow:0 4px 14px rgba(8,15,30,0.04); }
-
-.fab-whatsapp{ position:fixed; right:18px; bottom:18px; width:64px; height:64px; border-radius:999px; background:var(--accent); display:flex; align-items:center; justify-content:center; z-index:9999; box-shadow:0 12px 30px rgba(18,194,200,0.25); }
-.fab-whatsapp img{ width:34px; filter:invert(1) brightness(1.1); }
-
-/* footer */
-footer{ background:linear-gradient(180deg,#071a2b 0%,var(--primaria) 100%); color:white; padding:28px 18px; margin-top:36px; text-align:center; }
-.footer-grid{ max-width:1100px; margin:0 auto; display:flex; gap:18px; align-items:center; justify-content:space-between; flex-wrap:wrap; }
-.small{ font-size:13px; opacity:0.9; }
-
-/* responsive tweaks */
-@media(max-width:640px){ .header-logo{ height:72px } .header-title h1{ font-size:20px } nav{ padding:8px } }
-</style>
 </head>
 <body>
+<h1>Wilhasmar Ribeiro - Quiropraxista</h1>
 
-<header class="header">
-  <div class="header-inner">
-    <img src="logo-main.png" alt="Wilhasmar Ribeiro" class="header-logo">
-    <div class="header-title">
-      <h1>Wilhasmar Ribeiro - Quiropraxista</h1>
-      <p>Especialista em Hérnia de Disco, Dores da Coluna e Tendões</p>
-    </div>
-  </div>
-  <nav>
-    <a href="#dores">Dores</a>
-    <a href="#videos">Vídeos</a>
-    <a href="#depoimentos">Depoimentos</a>
-    <a href="#contato">Contato</a>
-  </nav>
-</header>
-
-<main class="container">
-  <section id="dores">
-    <h2>Dores Tratadas</h2>
-    <p class="lead">Atendemos pacientes com dores agudas e crônicas: coluna, hérnia, ciática, tendões e muito mais.</p>
-    <div class="grid" style="margin-top:12px;">
-      <div class="card">
-        <div class="service-title">Hérnia de Disco</div>
-        <div>Protocolos de descompressão, técnicas manuais e reabilitação funcional.</div>
-      </div>
-      <div class="card">
-        <div class="service-title">Dor Lombar</div>
-        <div>Abordagem mecânica e terapias específicas para recuperação rápida.</div>
-      </div>
-      <div class="card">
-        <div class="service-title">Ciatalgia</div>
-        <div>Redução de compressão neural e melhora da mobilidade.</div>
-      </div>
-      <div class="card">
-        <div class="service-title">Tendões</div>
-        <div>Tendinites, epicondilite, fascite plantar e tratamentos por bioestimulação.</div>
-      </div>
-      <div class="card">
-        <div class="service-title">Cervical</div>
-        <div>Tensão no pescoço, torcicolos e protrusões cervicais.</div>
-      </div>
-      <div class="card">
-        <div class="service-title">Torácica</div>
-        <div>Dores entre as escápulas, inflamação costal e restrição torácica.</div>
-      </div>
-    </div>
-  </section>
-
-  <section id="videos" style="margin-top:26px;">
-    <h2>Vídeos</h2>
-    <p class="lead">Vídeos explicativos e demonstrações de técnicas. Cole seus links do YouTube abaixo.</p>
-    <div class="grid" style="margin-top:12px;">
-      <div class="card video-frame">
-        <!-- exemplo de iframe, cole seu código do YouTube após "embed/" -->
-        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/VIDEO_ID1" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <div class="card video-frame">
-        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/VIDEO_ID2" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </div>
-    <div style="text-align:center;" class="cta-row">
-      <a class="btn" href="#contato">Agendar Consulta</a>
-      <a class="btn" href="https://wa.me/5569984831097">WhatsApp</a>
-    </div>
-  </section>
-
-  <section id="depoimentos" style="margin-top:26px;">
-    <h2>Depoimentos</h2>
-    <div class="depoimentos">
-      <div class="depo"><strong>Ana P.</strong><p>"Recuperei a mobilidade e a dor cedeu em poucas sessões."</p></div>
-      <div class="depo"><strong>João M.</strong><p>"Profissionalismo e resultados rápidos."</p></div>
-    </div>
-  </section>
-
-  <section id="contato" style="margin-top:26px;">
-    <h2>Contato</h2>
-    <div class="grid">
-      <div class="card">
-        <p>Endereço: Clínica XYZ, Cacoal - RO (adapte)</p>
-        <p>Telefone/WhatsApp: <strong>(69) 98483-1097</strong></p>
-        <p>Email: contato@wilhasquiropraxia.com (opcional)</p>
-        <div style="margin-top:12px;">
-          <a class="btn" href="https://wa.me/5569984831097">WhatsApp</a>
-        </div>
-      </div>
-      <div class="card">
-        <h3>Agende online</h3>
-        <p>Insira aqui um link de agendamento (Google Calendar, Calendly, etc.)</p>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<a class="fab-whatsapp" href="https://wa.me/5569984831097" target="_blank" title="WhatsApp">
-  <img src="https://simpleicons.org/icons/whatsapp.svg" alt="wa">
-</a>
-
-<footer>
-  <div class="footer-grid">
-    <div class="small">© 2025 Wilhasmar Ribeiro</div>
-    <div class="small">Feito com atenção clínica e técnica.</div>
-  </div>
-</footer>
+<h2>Escaneie para WhatsApp / Instagram</h2>
+<div class="qr-row">
+  <img src="card-qr.png" alt="QR - WhatsApp / Instagram" style="max-width:260px; border-radius:10px;">
+</div>
 
 </body>
 </html>
