@@ -79,6 +79,32 @@ restaurar a qualidade de vida com técnicas modernas e personalizadas.</p>
 </div>
 </div>
 
+
+<!-- DEPOMENTOS CARROSSEL REAL -->
+<section id="depoimentos" class="card section">
+  <h2>Depoimentos de Pacientes</h2>
+
+  <div class="carousel" style="display:flex;overflow-x:auto;gap:16px;scroll-snap-type:x mandatory;padding:12px 6px;">
+    <div style="min-width:320px; flex:0 0 auto; scroll-snap-align:center; border-radius:12px; overflow:hidden; box-shadow:0 8px 20px rgba(0,0,0,0.08); background:white;">
+      <img src="depoimento1.png" alt="Depoimento 1" style="width:100%; display:block;">
+    </div>
+
+    <div style="min-width:320px; flex:0 0 auto; scroll-snap-align:center; border-radius:12px; overflow:hidden; box-shadow:0 8px 20px rgba(0,0,0,0.08); background:white;">
+      <img src="depoimento2.png" alt="Depoimento 2" style="width:100%; display:block;">
+    </div>
+
+    <div style="min-width:320px; flex:0 0 auto; scroll-snap-align:center; border-radius:12px; overflow:hidden; box-shadow:0 8px 20px rgba(0,0,0,0.08); background:white;">
+      <img src="depoimento3.png" alt="Depoimento 3" style="width:100%; display:block;">
+    </div>
+  </div>
+
+  <div style="text-align:center; margin-top:10px;">
+    <button onclick="document.querySelector('#depoimentos .carousel').scrollBy({left:-340, behavior:'smooth'})" style="margin-right:8px;">◀</button>
+    <button onclick="document.querySelector('#depoimentos .carousel').scrollBy({left:340, behavior:'smooth'})">▶</button>
+  </div>
+</section>
+
+
 <!-- GALERIA -->
 <div class="section card">
 <h2>Galeria</h2>
