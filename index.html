@@ -548,7 +548,7 @@
       color: var(--text-muted);
     }
 
-    /* VIDEO */
+    /* VIDEO WRAPPER */
     .video-wrapper {
       border-radius: 24px;
       overflow: hidden;
@@ -859,6 +859,8 @@
       <nav class="nav-links" data-nav>
         <a href="#servicos">Serviços</a>
         <a href="#sobre">Sobre</a>
+        <a href="#video">Na prática</a>
+        <a href="#antes-depois">Antes e depois</a>
         <a href="#depoimentos">Depoimentos</a>
         <a href="#contato">Contato</a>
       </nav>
@@ -1072,7 +1074,7 @@
       </div>
     </section>
 
-    <!-- VÍDEO -->
+    <!-- VÍDEO YOUTUBE -->
     <section class="section" id="video">
       <div class="container">
         <header class="section-header">
@@ -1085,7 +1087,6 @@
 
         <div class="video-wrapper">
           <div class="video-inner">
-            <!-- Troque o src pelo vídeo que você já usa no site, se for outro -->
             <iframe src="https://www.youtube.com/embed/fGmUKcZQBOQ"
                     title="Tratamentos — Resultado do Primeiro Procedimento"
                     allowfullscreen
@@ -1096,6 +1097,35 @@
             <div>Vídeo demonstrativo · Resultados individuais podem variar de pessoa para pessoa.</div>
             <a href="https://wa.me/5569984831097" target="_blank" class="btn btn-sm btn-outline">
               Quero tirar uma dúvida sobre meu caso
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VÍDEO ANTES E DEPOIS LOCAL (.MP4) -->
+    <section class="section" id="antes-depois">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-kicker">Antes e depois</div>
+          <h2 class="section-title">Evolução em Hérnia de Disco Cervical</h2>
+          <p class="section-sub">
+            Comparação direta de mobilidade e dor antes e depois do procedimento inicial em um caso de hérnia de disco cervical.
+          </p>
+        </header>
+
+        <div class="video-wrapper">
+          <div class="video-inner">
+            <video controls autoplay muted loop
+                   style="position:absolute; top:0; left:0; width:100%; height:100%; border:0; border-radius:24px; object-fit:cover;">
+              <source src="2025-10-22-170540322.mp4" type="video/mp4">
+              Seu navegador não suporta o vídeo.
+            </video>
+          </div>
+          <div class="video-footer">
+            <div>Registro em vídeo da mudança clínica após o início do tratamento cervical.</div>
+            <a href="https://wa.me/5569984831097" target="_blank" class="btn btn-sm btn-outline">
+              Quero avaliar meu caso
             </a>
           </div>
         </div>
@@ -1117,9 +1147,7 @@
         <div class="testimonials-grid">
           <article class="testimonial-card">
             <div class="testimonial-header">
-              <div class="testimonial-avatar">
-                <!-- <img src="leidiany.jpg" alt="Foto da paciente Leidiany Brito"> -->
-              </div>
+              <div class="testimonial-avatar"></div>
               <div>
                 <div class="testimonial-name">Leidiany Brito</div>
                 <div class="testimonial-label">Paciente de coluna</div>
@@ -1136,9 +1164,7 @@
 
           <article class="testimonial-card">
             <div class="testimonial-header">
-              <div class="testimonial-avatar">
-                <!-- <img src="geraldo.jpg" alt="Foto do paciente Geraldo R."> -->
-              </div>
+              <div class="testimonial-avatar"></div>
               <div>
                 <div class="testimonial-name">Geraldo R.</div>
                 <div class="testimonial-label">Travamento de coluna</div>
@@ -1155,9 +1181,7 @@
 
           <article class="testimonial-card">
             <div class="testimonial-header">
-              <div class="testimonial-avatar">
-                <!-- <img src="estefani.jpg" alt="Foto da paciente Estefani Santana"> -->
-              </div>
+              <div class="testimonial-avatar"></div>
               <div>
                 <div class="testimonial-name">Estefani Santana</div>
                 <div class="testimonial-label">Dor lombar intensa</div>
