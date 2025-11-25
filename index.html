@@ -1,62 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Wilhasmar Ribeiro | Quiropraxista Especialista em Coluna</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Quiropraxista especializado em coluna, hérnia de disco, descompressão vertebral e reabilitação funcional em Rondônia. Atendimento humanizado e baseado em evidências.">
-  <meta name="author" content="Wilhasmar Ribeiro">
-
-  <!-- Fonte Google -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Cor da aba do navegador (mobile) -->
-  <meta name="theme-color" content="#0f172a">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Tratamento especializado em coluna, hérnia de disco, ciatalgia e descompressão vertebral com Wilhasmar Ribeiro, quiropraxista em Rondônia."
+  />
   <style>
     :root {
-      --bg-body: #020617;
-      --bg-section-dark: #020617;
-      --bg-section-light: #0b1220;
-      --bg-card: rgba(15, 23, 42, 0.96);
-      --bg-card-soft: rgba(15, 23, 42, 0.85);
-      --border-soft: rgba(148, 163, 184, 0.15);
-      --primary: #38bdf8;
-      --primary-soft: rgba(56, 189, 248, 0.15);
-      --accent: #22c55e;
-      --text-main: #f9fafb;
-      --text-soft: #cbd5f5;
-      --text-muted: #9ca3af;
-      --danger: #f97373;
+      --bg: #050509;
+      --bg-soft: #0b0c12;
+      --card: #111320;
+      --accent: #3ea2ff;
+      --accent-soft: rgba(62, 162, 255, 0.15);
+      --text: #f5f7ff;
+      --muted: #a4a8c3;
       --radius-lg: 18px;
-      --radius-full: 999px;
-      --shadow-soft: 0 22px 45px rgba(15, 23, 42, 0.75);
-      --shadow-subtle: 0 16px 30px rgba(15, 23, 42, 0.6);
-      --container-width: 1120px;
+      --radius-xl: 26px;
+      --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.45);
+      --max-width: 1100px;
     }
 
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
     }
 
     body {
-      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #0b1120 0, #020617 45%, #020617 100%);
-      color: var(--text-main);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: radial-gradient(circle at top, #1b2336 0, #050509 55%);
+      color: var(--text);
       line-height: 1.6;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
+      -webkit-font-smoothing: antialiased;
     }
 
     a {
@@ -64,1230 +43,965 @@
       text-decoration: none;
     }
 
-    .container {
-      width: 100%;
-      max-width: var(--container-width);
+    .page {
+      max-width: var(--max-width);
       margin: 0 auto;
-      padding: 0 1.5rem;
+      padding: 20px 16px 40px;
     }
 
-    /* HEADER / NAV */
-    .topbar {
+    header {
       position: sticky;
       top: 0;
-      z-index: 40;
+      z-index: 10;
       backdrop-filter: blur(18px);
-      background: linear-gradient(to bottom, rgba(2,6,23,0.97), rgba(2,6,23,0.6));
-      border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+      background: linear-gradient(
+        to bottom,
+        rgba(5, 5, 9, 0.94),
+        rgba(5, 5, 9, 0.75),
+        transparent
+      );
     }
 
-    .nav {
+    .topbar {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 14px 16px 10px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 72px;
+      gap: 12px;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 10px;
     }
 
-    .brand-logo {
-      width: 44px;
-      height: 44px;
-      border-radius: 999px;
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
       overflow: hidden;
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      box-shadow: 0 12px 26px rgba(15, 23, 42, 0.65);
-      background: radial-gradient(circle at 30% 0%, #38bdf8 0, #0f172a 40%, #020617 100%);
+      border: 1px solid rgba(255, 255, 255, 0.12);
     }
 
-    .brand-text-title {
-      font-size: 0.95rem;
-      font-weight: 600;
-      letter-spacing: 0.02em;
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
-    .brand-text-sub {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-    }
-
-    .nav-links {
+    .brand-text {
       display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      font-size: 0.9rem;
+      flex-direction: column;
+      font-size: 13px;
     }
 
-    .nav-links a {
+    .brand-text strong {
+      font-size: 14px;
+    }
+
+    nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      font-size: 12px;
+    }
+
+    nav a {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: transparent;
+      color: var(--muted);
+      border: 1px solid transparent;
+      transition: 0.2s ease;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      border-color: rgba(255, 255, 255, 0.18);
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    nav a.cta {
+      background: var(--accent);
+      color: #020308;
+      border-color: transparent;
+      font-weight: 600;
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06),
+        0 18px 38px rgba(62, 162, 255, 0.4);
+    }
+
+    main {
+      margin-top: 16px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 26px;
+      padding: 26px 20px 24px;
+      background: radial-gradient(
+          circle at top left,
+          rgba(62, 162, 255, 0.22),
+          transparent 55%
+        ),
+        radial-gradient(
+          circle at bottom right,
+          rgba(164, 80, 255, 0.18),
+          transparent 50%
+        ),
+        linear-gradient(135deg, #070814, #050509 55%, #060611);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(255, 255, 255, 0.06);
       position: relative;
-      color: var(--text-soft);
+      overflow: hidden;
     }
 
-    .nav-links a::after {
+    .hero::before {
       content: "";
       position: absolute;
-      left: 0;
-      bottom: -6px;
-      width: 0;
-      height: 2px;
-      border-radius: var(--radius-full);
-      background: linear-gradient(to right, var(--primary), var(--accent));
-      transition: width 0.18s ease-out;
+      inset: -120px;
+      background-image: radial-gradient(
+          circle at 10% 20%,
+          rgba(255, 255, 255, 0.06),
+          transparent 55%
+        ),
+        radial-gradient(
+          circle at 80% 90%,
+          rgba(255, 255, 255, 0.04),
+          transparent 55%
+        );
+      opacity: 0.7;
+      pointer-events: none;
     }
 
-    .nav-links a:hover {
-      color: var(--text-main);
+    .hero-left,
+    .hero-right {
+      position: relative;
+      z-index: 1;
     }
 
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    .nav-cta {
-      display: flex;
+    .badge {
+      display: inline-flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 8px;
+      padding: 4px 10px 4px 4px;
+      border-radius: 999px;
+      background: rgba(4, 10, 22, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 12px;
     }
 
-    .nav-cta-text {
-      font-size: 0.78rem;
-      color: var(--text-muted);
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #19e28a;
+      box-shadow: 0 0 0 4px rgba(25, 226, 138, 0.15);
     }
 
-    .nav-cta-text span {
-      color: var(--primary);
-      font-weight: 500;
+    .hero h1 {
+      font-size: clamp(26px, 4.1vw, 34px);
+      margin-bottom: 8px;
     }
 
-    /* BUTTONS */
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero-sub {
+      font-size: 14px;
+      color: var(--muted);
+      max-width: 440px;
+      margin-bottom: 16px;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+      font-size: 11px;
+    }
+
+    .hero-tags span {
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: rgba(9, 14, 24, 0.88);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--muted);
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 0.45rem;
-      border-radius: var(--radius-full);
+      gap: 6px;
+      padding: 9px 16px;
+      border-radius: 999px;
       border: 1px solid transparent;
-      padding: 0.65rem 1.4rem;
-      font-size: 0.9rem;
-      font-weight: 500;
+      font-size: 13px;
       cursor: pointer;
-      transition: all 0.18s ease-out;
-      white-space: nowrap;
+      transition: 0.18s ease;
+      text-decoration: none;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--primary), #0ea5e9);
-      color: #0b1120;
-      box-shadow: 0 14px 32px rgba(56, 189, 248, 0.45);
+      background: var(--accent);
+      color: #020308;
+      font-weight: 600;
+      box-shadow: 0 18px 35px rgba(62, 162, 255, 0.45);
     }
 
     .btn-primary:hover {
-      filter: brightness(1.06);
       transform: translateY(-1px);
-      box-shadow: 0 18px 40px rgba(56,189,248,0.55);
+      box-shadow: 0 20px 40px rgba(62, 162, 255, 0.55);
     }
 
     .btn-outline {
-      background: transparent;
-      border-color: rgba(148, 163, 184, 0.6);
-      color: var(--text-soft);
+      border-color: rgba(255, 255, 255, 0.16);
+      color: var(--text);
+      background: rgba(4, 6, 14, 0.85);
     }
 
     .btn-outline:hover {
-      border-color: var(--primary);
-      background: rgba(15,23,42,0.8);
-      color: var(--text-main);
+      background: rgba(15, 21, 35, 0.95);
     }
 
-    .btn-sm {
-      padding: 0.45rem 1rem;
-      font-size: 0.8rem;
+    .hero-note {
+      font-size: 11px;
+      color: var(--muted);
     }
 
-    .btn-icon {
-      font-size: 1.1rem;
-      line-height: 0;
-    }
-
-    /* HERO */
-    .hero {
-      padding: 3.5rem 0 2.5rem;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
-      gap: 2.5rem;
-      align-items: center;
-    }
-
-    .hero-kicker {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.25rem 0.7rem 0.25rem 0.35rem;
-      border-radius: var(--radius-full);
-      border: 1px solid rgba(56, 189, 248, 0.4);
-      background: radial-gradient(circle at 0 0, rgba(56,189,248,0.35), transparent 60%);
-      margin-bottom: 0.9rem;
-      font-size: 0.75rem;
-      color: var(--text-soft);
-    }
-
-    .hero-kicker-pill {
-      border-radius: var(--radius-full);
-      padding: 0.18rem 0.6rem;
-      background: rgba(15,23,42,0.95);
-      border: 1px solid rgba(148, 163, 184, 0.45);
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .hero-title {
-      font-size: clamp(2.15rem, 3vw, 2.8rem);
-      line-height: 1.15;
-      margin-bottom: 0.8rem;
-    }
-
-    .hero-title span {
-      background: linear-gradient(135deg, #38bdf8, #22c55e);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .hero-sub {
-      font-size: 0.98rem;
-      color: var(--text-soft);
-      max-width: 32rem;
-      margin-bottom: 1.4rem;
-    }
-
-    .hero-sub strong {
-      color: #e5e7eb;
-      font-weight: 500;
-    }
-
-    .hero-cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      align-items: center;
-      margin-bottom: 1.1rem;
-    }
-
-    .hero-info-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.4rem;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    .hero-info-item {
-      display: flex;
-      align-items: center;
-      gap: 0.45rem;
-    }
-
-    .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: var(--accent);
-      box-shadow: 0 0 0 5px rgba(34,197,94,0.25);
-    }
-
-    .dot-red {
-      background: var(--danger);
-      box-shadow: 0 0 0 5px rgba(248,113,113,0.22);
-    }
-
-    /* HERO CARD */
-    .hero-card {
-      border-radius: 24px;
-      background: radial-gradient(circle at 0 0, rgba(56,189,248,0.25), transparent 55%),
-                  radial-gradient(circle at 100% 0, rgba(34,197,94,0.18), transparent 55%),
-                  var(--bg-card);
-      border: 1px solid rgba(148, 163, 184, 0.25);
-      box-shadow: var(--shadow-soft);
-      padding: 1.4rem 1.5rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1rem;
-    }
-
-    .hero-card-title {
-      font-size: 0.9rem;
-      font-weight: 500;
-    }
-
-    .hero-card-badge {
-      font-size: 0.7rem;
-      padding: 0.25rem 0.7rem;
-      border-radius: var(--radius-full);
-      border: 1px solid rgba(56,189,248,0.6);
-      background: rgba(15,23,42,0.92);
-      color: var(--text-soft);
-    }
-
-    .hero-card-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.9rem;
-      font-size: 0.8rem;
-    }
-
-    .hero-card-item {
-      padding: 0.65rem 0.7rem;
-      border-radius: 14px;
-      background: rgba(15,23,42,0.85);
-      border: 1px solid rgba(148, 163, 184, 0.35);
-    }
-
-    .hero-card-item-title {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      margin-bottom: 0.1rem;
-    }
-
-    .hero-card-item-value {
-      font-weight: 500;
-      font-size: 0.85rem;
-    }
-
-    .hero-card-footer {
-      margin-top: 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.78rem;
-      color: var(--text-muted);
-    }
-
-    .hero-card-footer span {
-      color: var(--accent);
-      font-weight: 500;
-    }
-
-    /* SECTIONS */
-    .section {
-      padding: 3rem 0 2.5rem;
-    }
-
-    .section + .section {
-      border-top: 1px solid rgba(15, 23, 42, 0.85);
-    }
-
-    .section-header {
-      margin-bottom: 1.8rem;
+    .hero-right-card {
+      background: rgba(4, 6, 18, 0.9);
+      border-radius: 22px;
+      padding: 16px 14px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.6);
       display: flex;
       flex-direction: column;
-      gap: 0.4rem;
+      gap: 9px;
     }
 
-    .section-kicker {
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--primary);
-    }
-
-    .section-title {
-      font-size: 1.4rem;
-      font-weight: 600;
-    }
-
-    .section-sub {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      max-width: 32rem;
-    }
-
-    /* SERVICES */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 1rem;
-    }
-
-    .service-card {
-      background: var(--bg-card-soft);
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--border-soft);
-      padding: 1rem;
-      box-shadow: var(--shadow-subtle);
-      font-size: 0.85rem;
-    }
-
-    .service-tag {
+    .hero-right-pill {
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(62, 162, 255, 0.12);
       display: inline-flex;
+      align-self: flex-start;
       align-items: center;
-      gap: 0.35rem;
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--text-muted);
-      margin-bottom: 0.4rem;
+      gap: 6px;
+      color: var(--muted);
     }
 
-    .service-code {
-      font-weight: 600;
-      color: var(--primary);
-    }
-
-    .service-title {
-      font-weight: 500;
-      margin-bottom: 0.25rem;
-    }
-
-    .service-desc {
-      color: var(--text-soft);
-      font-size: 0.8rem;
-    }
-
-    /* ABOUT */
-    .about-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .about-text p {
-      font-size: 0.9rem;
-      color: var(--text-soft);
-      margin-bottom: 0.8rem;
-    }
-
-    .about-highlights {
+    .hero-metrics {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.75rem;
-      margin-top: 0.6rem;
-      font-size: 0.8rem;
+      gap: 10px;
+      margin-bottom: 4px;
     }
 
-    .about-highlight {
-      padding: 0.7rem 0.8rem;
+    .metric {
+      background: rgba(10, 12, 25, 0.92);
       border-radius: 14px;
-      background: rgba(15,23,42,0.9);
-      border: 1px dashed rgba(148,163,184,0.6);
+      padding: 8px 9px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      font-size: 11px;
     }
 
-    .about-highlight strong {
+    .metric strong {
+      font-size: 14px;
       display: block;
-      font-size: 0.8rem;
-      margin-bottom: 0.1rem;
-      color: #e5e7eb;
     }
 
-    .about-card {
-      border-radius: 24px;
-      background: radial-gradient(circle at 100% 0, rgba(56,189,248,0.16), transparent 60%), var(--bg-card);
-      border: 1px solid rgba(148, 163, 184, 0.25);
-      padding: 1.2rem 1.3rem;
-      box-shadow: var(--shadow-soft);
-      font-size: 0.8rem;
-    }
-
-    .about-card-header {
+    .hero-bottom {
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 0.7rem;
+      gap: 10px;
+      font-size: 11px;
+      color: var(--muted);
     }
 
-    .about-avatar {
-      width: 54px;
-      height: 54px;
-      border-radius: 999px;
-      overflow: hidden;
-      border: 1px solid rgba(148, 163, 184, 0.6);
+    .hero-bottom span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }
 
-    .about-name {
-      font-size: 0.95rem;
-      font-weight: 600;
-    }
-
-    .about-role {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    .about-card-body p {
-      color: var(--text-soft);
-      margin-bottom: 0.6rem;
-    }
-
-    .about-chip-row {
+    .pill-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 0.4rem;
+      gap: 8px;
+      font-size: 11px;
+      margin-top: 4px;
+    }
+
+    .pill-list span {
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: rgba(7, 9, 18, 0.96);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      color: var(--muted);
+    }
+
+    section {
+      margin-top: 30px;
+    }
+
+    section h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    section p.lead {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 16px;
+      max-width: 620px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      background: rgba(7, 9, 18, 0.96);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 14px 14px 12px;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.6);
+      font-size: 13px;
+    }
+
+    .card h3 {
+      font-size: 15px;
+      margin-bottom: 4px;
     }
 
     .chip {
-      font-size: 0.7rem;
-      padding: 0.2rem 0.55rem;
-      border-radius: var(--radius-full);
-      background: rgba(15,23,42,0.96);
-      border: 1px solid rgba(148,163,184,0.5);
-      color: var(--text-muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 8px;
+      font-size: 11px;
+      border-radius: 999px;
+      background: rgba(3, 7, 18, 0.94);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      margin-bottom: 6px;
+      color: var(--muted);
     }
 
-    /* VIDEO WRAPPER */
-    .video-wrapper {
-      border-radius: 24px;
-      overflow: hidden;
-      border: 1px solid var(--border-soft);
-      background: radial-gradient(circle at 0 0, rgba(56,189,248,0.25), transparent 55%), #020617;
-      box-shadow: var(--shadow-soft);
+    .text-muted {
+      color: var(--muted);
+      font-size: 13px;
     }
 
-    .video-inner {
+    /* VÍDEOS RESPONSIVOS */
+
+    .video-block {
+      margin-top: 14px;
+      background: rgba(7, 9, 18, 0.96);
+      padding: 12px;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .video-label {
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .video-frame {
       position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
+      width: 100%;
+      max-width: 720px;
+      margin: 0 auto;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #000;
     }
 
-    .video-inner iframe {
+    .video-frame::before {
+      content: "";
+      display: block;
+      padding-bottom: 56.25%;
+    }
+
+    .video-frame iframe,
+    .video-frame video {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
       border: 0;
+      border-radius: 18px;
+      object-fit: contain; /* ⚠️ NÃO CORTA O VÍDEO, MOSTRA ELE INTEIRO */
+      background: #000;
+      display: block;
     }
 
-    .video-footer {
-      padding: 0.9rem 1.1rem;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      display: flex;
-      justify-content: space-between;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-      align-items: center;
+    .video-caption {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 6px;
     }
 
-    /* TESTIMONIALS */
-    .testimonials-grid {
+    /* Depoimentos */
+
+    .testimonials {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1rem;
-    }
-
-    .testimonial-card {
-      background: var(--bg-card-soft);
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--border-soft);
-      padding: 1rem;
-      box-shadow: var(--shadow-subtle);
-      font-size: 0.85rem;
-    }
-
-    .testimonial-header {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      margin-bottom: 0.45rem;
-    }
-
-    .testimonial-avatar {
-      width: 38px;
-      height: 38px;
-      border-radius: 999px;
-      overflow: hidden;
-      background: radial-gradient(circle at 30% 0, #38bdf8, #0f172a 50%, #020617 100%);
+      gap: 14px;
     }
 
     .testimonial-name {
-      font-size: 0.9rem;
-      font-weight: 500;
+      font-weight: 600;
+      font-size: 13px;
+      margin-bottom: 2px;
     }
 
-    .testimonial-label {
-      font-size: 0.7rem;
-      color: var(--text-muted);
+    .testimonial-role {
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 6px;
     }
 
-    .testimonial-body {
-      font-size: 0.8rem;
-      color: var(--text-soft);
+    .testimonial-tag {
+      margin-top: 8px;
+      font-size: 11px;
+      color: var(--muted);
     }
 
-    .testimonial-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.25rem;
-      margin-top: 0.55rem;
-      font-size: 0.7rem;
-      padding: 0.18rem 0.55rem;
-      border-radius: var(--radius-full);
-      background: var(--primary-soft);
-      color: #e5f6ff;
-    }
+    /* Contato */
 
-    /* CONTACT / CTA */
     .contact-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.9fr);
-      gap: 1.5rem;
-      align-items: center;
-    }
-
-    .contact-card {
-      background: var(--bg-card);
-      border-radius: 24px;
-      border: 1px solid var(--border-soft);
-      padding: 1.3rem 1.4rem;
-      box-shadow: var(--shadow-soft);
-      font-size: 0.9rem;
-    }
-
-    .contact-card p {
-      color: var(--text-soft);
-      margin-bottom: 0.9rem;
-    }
-
-    .contact-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.7rem;
-      margin-bottom: 0.9rem;
-    }
-
-    .contact-detail {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    .contact-detail strong {
-      color: #e5e7eb;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.9fr);
+      gap: 14px;
     }
 
     .qr-card {
-      max-width: 220px;
-      margin-left: auto;
-      margin-right: auto;
+      background: rgba(7, 9, 18, 0.96);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 12px;
       text-align: center;
-      background: rgba(15,23,42,0.9);
-      border-radius: 24px;
-      border: 1px solid rgba(148,163,184,0.5);
-      padding: 1rem;
-      box-shadow: var(--shadow-subtle);
-      font-size: 0.75rem;
     }
 
-    .qr-card img {
-      width: 100%;
-      border-radius: 16px;
+    .qr-img {
+      width: 180px;
+      max-width: 100%;
+      margin: 6px auto 6px;
+      border-radius: 20px;
+      overflow: hidden;
       background: #fff;
-      padding: 0.4rem;
-      margin-bottom: 0.6rem;
     }
 
-    .qr-caption {
-      color: var(--text-soft);
-      margin-bottom: 0.2rem;
+    .qr-img img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
     }
 
-    .qr-note {
-      color: var(--text-muted);
-      font-size: 0.72rem;
-    }
-
-    /* FOOTER */
     footer {
-      padding: 1.4rem 0 1.8rem;
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      border-top: 1px solid rgba(15,23,42,0.9);
-    }
-
-    .footer-row {
+      margin-top: 26px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 11px;
+      color: var(--muted);
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      gap: 10px;
       flex-wrap: wrap;
-      gap: 0.6rem;
     }
 
-    .footer-row a {
-      color: var(--text-soft);
-      font-size: 0.78rem;
+    footer a {
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-underline-offset: 3px;
     }
 
-    .footer-row a:hover {
-      color: var(--primary);
-    }
+    /* Responsivo */
 
-    /* NAV TOGGLE (MOBILE) */
-    .nav-toggle {
-      display: none;
-      border: 1px solid rgba(148,163,184,0.6);
-      background: rgba(15,23,42,0.9);
-      border-radius: var(--radius-full);
-      width: 40px;
-      height: 40px;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      color: var(--text-soft);
-    }
-
-    /* RESPONSIVO */
-    @media (max-width: 960px) {
-      .hero-grid {
+    @media (max-width: 880px) {
+      .hero {
         grid-template-columns: minmax(0, 1fr);
+        padding: 20px 16px 18px;
       }
 
-      .hero-card {
+      .hero-right {
         order: -1;
       }
 
-      .services-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+      .grid-3,
+      .testimonials {
+        grid-template-columns: minmax(0, 1fr);
       }
 
-      .about-grid,
+      .grid-2 {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
       .contact-grid {
         grid-template-columns: minmax(0, 1fr);
       }
 
-      .testimonials-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+      .page {
+        padding-inline: 14px;
       }
     }
 
-    @media (max-width: 768px) {
-      .nav-toggle {
-        display: inline-flex;
-      }
-
-      .nav-links,
-      .nav-cta {
-        display: none;
-      }
-
-      .nav-open .nav-links,
-      .nav-open .nav-cta {
-        display: flex;
-      }
-
-      .nav-open .nav-links {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-        padding-top: 1rem;
-      }
-
-      .nav-open .nav {
-        flex-wrap: wrap;
-        align-items: flex-start;
-        height: auto;
-        padding-bottom: 0.75rem;
-      }
-
-      .hero {
-        padding-top: 2.1rem;
-      }
-
-      .hero-title {
-        font-size: 1.9rem;
-      }
-
-      .hero-cta-row {
+    @media (max-width: 600px) {
+      .topbar {
         flex-direction: column;
         align-items: flex-start;
       }
 
-      .services-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .testimonials-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .hero-card-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .footer-row {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .qr-card {
-        margin-top: 1rem;
+      nav {
+        justify-content: flex-start;
       }
     }
   </style>
 </head>
 <body>
-  <!-- HEADER -->
-  <header class="topbar">
-    <div class="container nav">
+  <header>
+    <div class="topbar">
       <div class="brand">
-        <!-- Troque o src abaixo pelo seu logo atual -->
-        <div class="brand-logo">
-          <!-- <img src="logo-wilhasmar.png" alt="Logo Wilhasmar Ribeiro"> -->
+        <div class="avatar">
+          <!-- troque o src se usar outra foto -->
+          <img src="avatar-wilhasmar.jpg" alt="Foto de Wilhasmar Ribeiro" />
         </div>
-        <div>
-          <div class="brand-text-title">Wilhasmar Ribeiro</div>
-          <div class="brand-text-sub">Quiropraxista · Coluna & Hérnia de Disco</div>
+        <div class="brand-text">
+          <strong>Wilhasmar Ribeiro</strong>
+          <span>Quiropraxista · Coluna &amp; Hérnia de Disco</span>
         </div>
       </div>
-
-      <button class="nav-toggle" type="button" aria-label="Abrir menu" data-nav-toggle>
-        ☰
-      </button>
-
-      <nav class="nav-links" data-nav>
+      <nav>
         <a href="#servicos">Serviços</a>
         <a href="#sobre">Sobre</a>
-        <a href="#video">Na prática</a>
+        <a href="#pratica">Na prática</a>
         <a href="#antes-depois">Antes e depois</a>
         <a href="#depoimentos">Depoimentos</a>
         <a href="#contato">Contato</a>
+        <a
+          href="https://ng.quarkclinic.com.br/app/profissional-saude/agendamentos"
+          target="_blank"
+          class="cta"
+          >Agendar</a
+        >
       </nav>
-
-      <div class="nav-cta" data-nav>
-        <div class="nav-cta-text">
-          Alívio de dor em <span>coluna, ciatalgia e hérnia de disco</span>.
-        </div>
-        <a href="https://ng.quarkclinic.com.br/app/profissional-saude/agendamentos" target="_blank" class="btn btn-sm btn-primary">
-          Agendar consulta
-        </a>
-      </div>
     </div>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero" id="inicio">
-      <div class="container hero-grid">
-        <div>
-          <div class="hero-kicker">
-            <span class="hero-kicker-pill">Especialista em Coluna</span>
-            Quiropraxia · Descompressão · Reabilitação
+  <div class="page">
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="topo">
+        <div class="hero-left">
+          <div class="badge">
+            <span class="badge-dot"></span> Atendimento em Rondônia &middot;
+            Coluna · Hérnia de Disco · Ciatalgia
           </div>
-          <h1 class="hero-title">
-            Recupere sua mobilidade.<br>
-            Tratamento para <span>Hérnia de Disco</span>.
+
+          <h1>
+            Recupere sua
+            <span>mobilidade</span> e diminua a dor na coluna.
           </h1>
           <p class="hero-sub">
-            Atendimento humanizado para coluna, combinando quiropraxia, descompressão vertebral e exercícios terapêuticos.
-            Foco em <strong>reduzir dor</strong>, recuperar movimentos e prevenir novas crises.
+            Tratamento especializado em coluna, combinando quiropraxia,
+            descompressão vertebral e exercícios terapêuticos. Foco em reduzir
+            dor, recuperar movimentos e prevenir novas crises.
           </p>
 
-          <div class="hero-cta-row">
-            <a href="https://ng.quarkclinic.com.br/app/profissional-saude/agendamentos" target="_blank" class="btn btn-primary">
-              <span class="btn-icon">📅</span>
-              Agendar agora
-            </a>
-            <a href="https://wa.me/5569984831097" target="_blank" class="btn btn-outline">
-              <span class="btn-icon">💬</span>
-              Falar no WhatsApp
-            </a>
+          <div class="hero-tags">
+            <span>Hérnia de disco</span>
+            <span>Ciatalgia</span>
+            <span>Lombalgia crônica</span>
+            <span>Travamento de coluna</span>
           </div>
 
-          <div class="hero-info-row">
-            <div class="hero-info-item">
-              <span class="dot"></span>
-              <span>Protocolos individualizados, baseados em evidências.</span>
-            </div>
-            <div class="hero-info-item">
-              <span class="dot-red"></span>
-              <span>Indicado para dor lombar, ciatalgia, hérnia de disco e travamento da coluna.</span>
-            </div>
+          <div class="hero-cta">
+            <a
+              href="https://ng.quarkclinic.com.br/app/profissional-saude/agendamentos"
+              target="_blank"
+              class="btn btn-primary"
+              >Agendar consulta online</a
+            >
+            <a
+              href="https://wa.me/5569984831097"
+              target="_blank"
+              class="btn btn-outline"
+              >Falar no WhatsApp</a
+            >
+          </div>
+
+          <p class="hero-note">
+            Primeira etapa: avaliação completa de coluna. Tempo médio: 40–60
+            minutos.
+          </p>
+
+          <div class="pill-list" style="margin-top: 10px">
+            <span>Protocolos individualizados, baseados em evidências</span>
+            <span>Abordagem conservadora, não-cirúrgica</span>
           </div>
         </div>
 
-        <aside class="hero-card" aria-label="Resumo dos principais focos de tratamento">
-          <div class="hero-card-header">
-            <div>
-              <div class="hero-card-title">Focos principais do tratamento</div>
-              <div style="font-size:0.78rem;color:var(--text-muted);">Coluna · Discos · Nervos · Função</div>
-            </div>
-            <div class="hero-card-badge">Atendimento em Rondônia</div>
-          </div>
+        <div class="hero-right">
+          <div class="hero-right-card">
+            <span class="hero-right-pill">
+              🔎 Foco: coluna, discos e nervos
+            </span>
 
-          <div class="hero-card-grid">
-            <div class="hero-card-item">
-              <div class="hero-card-item-title">HD · Hérnia de Disco</div>
-              <div class="hero-card-item-value">Tratamento conservador e seguro.</div>
+            <div class="hero-metrics">
+              <div class="metric">
+                <strong>HD · Hérnia de Disco</strong>
+                Tratamento conservador, seguro e progressivo.
+              </div>
+              <div class="metric">
+                <strong>DV · Descompressão</strong>
+                Alívio de pressão sobre nervos e discos.
+              </div>
+              <div class="metric">
+                <strong>RF · Reabilitação</strong>
+                Estabilidade, força e controle de movimento.
+              </div>
+              <div class="metric">
+                <strong>CI · Ciatalgia</strong>
+                Dor irradiada para perna e glúteo.
+              </div>
             </div>
-            <div class="hero-card-item">
-              <div class="hero-card-item-title">DV · Descompressão Vertebral</div>
-              <div class="hero-card-item-value">Alívio de pressão e dor nervosa.</div>
-            </div>
-            <div class="hero-card-item">
-              <div class="hero-card-item-title">RF · Reabilitação Funcional</div>
-              <div class="hero-card-item-value">Força, controle e estabilidade.</div>
-            </div>
-            <div class="hero-card-item">
-              <div class="hero-card-item-title">CI · Ciatalgia</div>
-              <div class="hero-card-item-value">Dor irradiada para perna e glúteo.</div>
-            </div>
-          </div>
 
-          <div class="hero-card-footer">
-            <span>Primeira etapa: avaliação completa da coluna.</span>
-            <span>Tempo médio inicial: 40–60 min</span>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- SERVIÇOS -->
-    <section class="section" id="servicos">
-      <div class="container">
-        <header class="section-header">
-          <div class="section-kicker">Serviços</div>
-          <h2 class="section-title">O que posso fazer pela sua coluna</h2>
-          <p class="section-sub">
-            Cada paciente recebe um plano específico, combinando técnicas manuais, descompressão e exercícios personalizados.
-          </p>
-        </header>
-
-        <div class="services-grid">
-          <article class="service-card">
-            <div class="service-tag">
-              <span class="service-code">Avaliação</span>
-              • primeira consulta
-            </div>
-            <h3 class="service-title">Avaliação especializada</h3>
-            <p class="service-desc">
-              Entrevista detalhada, testes específicos de coluna e definição do melhor plano de tratamento para o seu caso.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-tag">
-              <span class="service-code">HD</span>
-              • hérnia de disco
-            </div>
-            <h3 class="service-title">Tratamento conservador de hérnia</h3>
-            <p class="service-desc">
-              Estratégias para reduzir dor, descompressão do disco e retorno seguro às atividades do dia a dia.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-tag">
-              <span class="service-code">DV</span>
-              • descompressão
-            </div>
-            <h3 class="service-title">Descompressão vertebral</h3>
-            <p class="service-desc">
-              Técnicas manuais e mecânicas que aliviam a pressão sobre nervos, especialmente em lombalgia e ciatalgia.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-tag">
-              <span class="service-code">RF</span>
-              • reabilitação
-            </div>
-            <h3 class="service-title">Reabilitação funcional</h3>
-            <p class="service-desc">
-              Exercícios terapêuticos, educação postural e estratégias para prevenir que a dor volte a limitar sua rotina.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SOBRE -->
-    <section class="section" id="sobre">
-      <div class="container about-grid">
-        <div class="about-text">
-          <header class="section-header">
-            <div class="section-kicker">Sobre mim</div>
-            <h2 class="section-title">Wilhasmar Ribeiro · Quiropraxista</h2>
-          </header>
-
-          <p>
-            Atuo com foco em coluna e reabilitação de pacientes com hérnia de disco, lombalgia, ciatalgia, tendinites e fascite plantar.
-            Minha missão é devolver sua liberdade de movimento e diminuir dores que atrapalham sua rotina.
-          </p>
-          <p>
-            Os protocolos são montados de forma individual, porque cada corpo responde de um jeito. Busco unir
-            <strong>alívio rápido da dor</strong>, recuperação da função e prevenção de novas crises, sempre com uma abordagem segura, acolhedora
-            e alinhada às evidências científicas.
-          </p>
-
-          <div class="about-highlights">
-            <div class="about-highlight">
-              <strong>Foco em coluna</strong>
-              Avaliação detalhada de coluna lombar, torácica e cervical, com atenção especial à função dos discos e nervos.
-            </div>
-            <div class="about-highlight">
-              <strong>Reabilitação ativa</strong>
-              Você aprende exercícios e estratégias para se manter bem no dia a dia, fora da maca.
+            <div class="hero-bottom">
+              <span>📍 Rondônia · Brasil</span>
+              <span>🎯 Indicado para dor lombar, travamento e crises recorrentes</span>
             </div>
           </div>
         </div>
+      </section>
 
-        <aside class="about-card" aria-label="Resumo profissional de Wilhasmar Ribeiro">
-          <div class="about-card-header">
-            <div class="about-avatar">
-              <!-- Troque pelo seu retrato, se desejar -->
-              <!-- <img src="wilhasmar-foto.jpg" alt="Foto de Wilhasmar Ribeiro"> -->
-            </div>
-            <div>
-              <div class="about-name">Wilhasmar Ribeiro</div>
-              <div class="about-role">Quiropraxista · Especialista em Coluna</div>
-            </div>
+      <!-- SERVIÇOS -->
+      <section id="servicos">
+        <h2>O que posso fazer pela sua coluna</h2>
+        <p class="lead">
+          Cada paciente recebe um plano específico, combinando técnicas
+          manuais, descompressão e exercícios personalizados, de acordo com a
+          necessidade da sua coluna.
+        </p>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="chip">Avaliação • primeira consulta</div>
+            <h3>Avaliação especializada</h3>
+            <p class="text-muted">
+              Entrevista detalhada, testes específicos de coluna e definição do
+              melhor plano de tratamento para o seu caso.
+            </p>
           </div>
-          <div class="about-card-body">
-            <p>
-              Atendimento voltado para pessoas que já tentaram outras abordagens e ainda sentem dor na coluna, travamentos
+
+          <div class="card">
+            <div class="chip">HD • hérnia de disco</div>
+            <h3>Tratamento conservador de hérnia</h3>
+            <p class="text-muted">
+              Estratégias para reduzir dor, descompressão do disco e retorno
+              seguro às atividades do dia a dia.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="chip">DV • descompressão vertebral</div>
+            <h3>Descompressão vertebral</h3>
+            <p class="text-muted">
+              Técnicas manuais e mecânicas que aliviam a pressão sobre nervos,
+              especialmente em lombalgia e ciatalgia.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="chip">RF • reabilitação</div>
+            <h3>Reabilitação funcional</h3>
+            <p class="text-muted">
+              Exercícios terapêuticos, educação postural e estratégias para
+              prevenir que a dor volte a limitar sua rotina.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="chip">Coluna completa</div>
+            <h3>Coluna lombar, torácica e cervical</h3>
+            <p class="text-muted">
+              Avaliação e cuidado global dos segmentos da coluna, discos e
+              nervos, com foco em função e mobilidade.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="chip">Crises recorrentes</div>
+            <h3>Prevenção de novas crises</h3>
+            <p class="text-muted">
+              Orientações e plano ativo para reduzir o risco de novos
+              travamentos e reaparecimento da dor.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOBRE -->
+      <section id="sobre">
+        <h2>Sobre mim</h2>
+        <p class="lead">
+          Atuo com foco em coluna e reabilitação de pacientes com hérnia de
+          disco, lombalgia, ciatalgia, tendinites e fascite plantar. A missão é
+          devolver sua liberdade de movimento e diminuir dores que atrapalham
+          sua rotina.
+        </p>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Abordagem individualizada</h3>
+            <p class="text-muted">
+              Os protocolos são montados de forma individual, porque cada corpo
+              responde de um jeito. A ideia é unir alívio rápido da dor,
+              recuperação da função e prevenção de novas crises.
+            </p>
+            <p class="text-muted" style="margin-top: 8px">
+              Atendimento voltado, principalmente, para pessoas que já tentaram
+              outras abordagens e ainda sentem dor na coluna, travamentos
               frequentes ou limitação para agachar, caminhar, dirigir ou dormir.
             </p>
-            <p>
-              O foco é ir além do alívio imediato, construindo estabilidade e confiança no movimento.
+          </div>
+
+          <div class="card">
+            <h3>Foco em coluna e reabilitação ativa</h3>
+            <p class="text-muted">
+              Foco em avaliação detalhada de coluna lombar, torácica e cervical,
+              com atenção especial à função dos discos e nervos.
             </p>
-
-            <div class="about-chip-row">
-              <span class="chip">Hérnia de disco</span>
-              <span class="chip">Descompressão vertebral</span>
-              <span class="chip">Ciatalgia</span>
-              <span class="chip">Lombalgia crônica</span>
-            </div>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- VÍDEO YOUTUBE -->
-    <section class="section" id="video">
-      <div class="container">
-        <header class="section-header">
-          <div class="section-kicker">Na prática</div>
-          <h2 class="section-title">Assista a um caso real de tratamento</h2>
-          <p class="section-sub">
-            Veja um exemplo de resultado após o primeiro procedimento, com melhora significativa da dor e da mobilidade do paciente.
-          </p>
-        </header>
-
-        <div class="video-wrapper">
-          <div class="video-inner">
-            <iframe src="https://www.youtube.com/embed/fGmUKcZQBOQ"
-                    title="Tratamentos — Resultado do Primeiro Procedimento"
-                    allowfullscreen
-                    loading="lazy">
-            </iframe>
-          </div>
-          <div class="video-footer">
-            <div>Vídeo demonstrativo · Resultados individuais podem variar de pessoa para pessoa.</div>
-            <a href="https://wa.me/5569984831097" target="_blank" class="btn btn-sm btn-outline">
-              Quero tirar uma dúvida sobre meu caso
-            </a>
+            <p class="text-muted" style="margin-top: 8px">
+              A reabilitação ativa faz parte do processo: você aprende
+              exercícios e estratégias para se manter bem no dia a dia, fora da
+              maca, construindo estabilidade e confiança no movimento.
+            </p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- VÍDEO ANTES E DEPOIS LOCAL (.MP4) -->
-    <section class="section" id="antes-depois">
-      <div class="container">
-        <header class="section-header">
-          <div class="section-kicker">Antes e depois</div>
-          <h2 class="section-title">Evolução em Hérnia de Disco Cervical</h2>
-          <p class="section-sub">
-            Comparação direta de mobilidade e dor antes e depois do procedimento inicial em um caso de hérnia de disco cervical.
-          </p>
-        </header>
+      <!-- NA PRÁTICA -->
+      <section id="pratica">
+        <h2>Na prática · Assista a um caso real</h2>
+        <p class="lead">
+          Veja um exemplo de resultado após o primeiro procedimento, com melhora
+          significativa da dor e da mobilidade do paciente. Resultados
+          individuais podem variar de pessoa para pessoa.
+        </p>
 
-        <!-- Diminuímos o tamanho máximo do vídeo aqui -->
-        <div class="video-wrapper" style="max-width: 600px; margin: 0 auto;">
-          <div class="video-inner" style="padding-bottom: 50%;">
-            <video controls autoplay muted loop
-                   style="position:absolute; top:0; left:0; width:100%; height:100%; border:0; border-radius:24px; object-fit:cover;">
-              <source src="2025-10-22-170540322.mp4" type="video/mp4">
+        <div class="video-block">
+          <div class="video-label">Vídeo demonstrativo de atendimento</div>
+
+          <!-- SEU VÍDEO DO YOUTUBE CONTINUA AQUI -->
+          <div class="video-frame">
+            <!-- se o ID do vídeo for diferente, troque apenas depois de /embed/ -->
+            <iframe
+              src="https://www.youtube.com/embed/d5PzmnMLksw"
+              title="Caso real de tratamento com Wilhasmar Ribeiro"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <div class="video-caption">
+            Exemplo de caso clínico com melhora perceptível após o início do
+            protocolo de tratamento.
+          </div>
+        </div>
+
+        <div style="margin-top: 10px">
+          <a
+            href="https://wa.me/5569984831097"
+            target="_blank"
+            class="btn btn-outline"
+            >Quero tirar uma dúvida sobre meu caso</a
+          >
+        </div>
+      </section>
+
+      <!-- ANTES E DEPOIS -->
+      <section id="antes-depois">
+        <h2>Antes e depois · Hérnia de Disco Cervical</h2>
+        <p class="lead">
+          Comparação direta de mobilidade e dor antes e depois do procedimento
+          inicial em um caso de hérnia de disco cervical.
+        </p>
+
+        <div class="video-block">
+          <div class="video-label">Vídeo de evolução clínica</div>
+
+          <!-- ⚠️ AQUI ESTÁ O SEU ARQUIVO MP4 LOCAL -->
+          <div class="video-frame">
+            <video controls>
+              <source src="2025-10-22-170540322.mp4" type="video/mp4" />
               Seu navegador não suporta o vídeo.
             </video>
           </div>
-          <div class="video-footer">
-            <div>Registro em vídeo da mudança clínica após o início do tratamento cervical.</div>
-            <a href="https://wa.me/5569984831097" target="_blank" class="btn btn-sm btn-outline">
-              Quero avaliar meu caso
-            </a>
+
+          <div class="video-caption">
+            Registro em vídeo da mudança clínica após o início do tratamento
+            cervical.
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- DEPOIMENTOS -->
-    <section class="section" id="depoimentos">
-      <div class="container">
-        <header class="section-header">
-          <div class="section-kicker">Depoimentos</div>
-          <h2 class="section-title">O que alguns pacientes relatam</h2>
-          <p class="section-sub">
-            Experiências reais de pessoas que chegaram com dor intensa, travamento ou limitação para atividades simples
-            como caminhar, trabalhar ou dormir.
-          </p>
-        </header>
+        <div style="margin-top: 10px">
+          <a
+            href="https://wa.me/5569984831097"
+            target="_blank"
+            class="btn btn-primary"
+            >Quero avaliar meu caso</a
+          >
+        </div>
+      </section>
 
-        <div class="testimonials-grid">
-          <article class="testimonial-card">
-            <div class="testimonial-header">
-              <div class="testimonial-avatar"></div>
-              <div>
-                <div class="testimonial-name">Leidiany Brito</div>
-                <div class="testimonial-label">Paciente de coluna</div>
-              </div>
-            </div>
-            <p class="testimonial-body">
-              Passei por vários profissionais antes, mas só tive resultado com o Dr. Wilhas. Ele explica cada passo,
-              transmite segurança e conduz o tratamento com muita precisão.
+      <!-- DEPOIMENTOS -->
+      <section id="depoimentos">
+        <h2>O que alguns pacientes relatam</h2>
+        <p class="lead">
+          Experiências reais de pessoas que chegaram com dor intensa,
+          travamento ou limitação para atividades simples como caminhar,
+          trabalhar ou dormir.
+        </p>
+
+        <div class="testimonials">
+          <div class="card">
+            <div class="testimonial-name">Leidiany Brito</div>
+            <div class="testimonial-role">Paciente de coluna</div>
+            <p class="text-muted">
+              "Passei por vários profissionais antes, mas só tive resultado com
+              o Dr. Wilhas. Ele explica cada passo, transmite segurança e conduz
+              o tratamento com muita precisão."
             </p>
-            <div class="testimonial-badge">
-              ⭐ Alívio consistente da dor
-            </div>
-          </article>
+            <div class="testimonial-tag">⭐ Alívio consistente da dor</div>
+          </div>
 
-          <article class="testimonial-card">
-            <div class="testimonial-header">
-              <div class="testimonial-avatar"></div>
-              <div>
-                <div class="testimonial-name">Geraldo R.</div>
-                <div class="testimonial-label">Travamento de coluna</div>
-              </div>
-            </div>
-            <p class="testimonial-body">
-              Cheguei com a coluna travada e, na segunda sessão, já estava sem dor. Ainda saí com orientações claras
-              para não passar por isso novamente.
+          <div class="card">
+            <div class="testimonial-name">Geraldo R.</div>
+            <div class="testimonial-role">Travamento de coluna</div>
+            <p class="text-muted">
+              "Cheguei com a coluna travada e, na segunda sessão, já estava sem
+              dor. Ainda saí com orientações claras para não passar por isso
+              novamente."
             </p>
-            <div class="testimonial-badge">
-              ✅ Retorno rápido às atividades
-            </div>
-          </article>
+            <div class="testimonial-tag">✅ Retorno rápido às atividades</div>
+          </div>
 
-          <article class="testimonial-card">
-            <div class="testimonial-header">
-              <div class="testimonial-avatar"></div>
-              <div>
-                <div class="testimonial-name">Estefani Santana</div>
-                <div class="testimonial-label">Dor lombar intensa</div>
-              </div>
-            </div>
-            <p class="testimonial-body">
-              Estava há meses com dor forte e, após a primeira sessão, senti grande melhora. Isso me devolveu confiança
-              para voltar a me movimentar.
+          <div class="card">
+            <div class="testimonial-name">Estefani Santana</div>
+            <div class="testimonial-role">Dor lombar intensa</div>
+            <p class="text-muted">
+              "Estava há meses com dor forte e, após a primeira sessão, senti
+              grande melhora. Isso me devolveu confiança para voltar a me
+              movimentar."
             </p>
-            <div class="testimonial-badge">
+            <div class="testimonial-tag">
               💬 Melhora logo nas primeiras sessões
             </div>
-          </article>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- CONTATO / CTA FINAL -->
-    <section class="section" id="contato">
-      <div class="container contact-grid">
-        <div>
-          <header class="section-header">
-            <div class="section-kicker">Contato</div>
-            <h2 class="section-title">Pronto para cuidar da sua coluna?</h2>
-            <p class="section-sub">
-              Se você sente dor frequente, travamentos ou está preocupado com hérnia de disco, vamos avaliar seu caso com calma
-              e montar uma estratégia de tratamento adequada.
-            </p>
-          </header>
+      <!-- CONTATO -->
+      <section id="contato">
+        <h2>Pronto para cuidar da sua coluna?</h2>
+        <p class="lead">
+          Se você sente dor frequente, travamentos ou está preocupado com hérnia
+          de disco, vamos avaliar seu caso com calma e montar uma estratégia de
+          tratamento adequada. Você pode agendar diretamente pela plataforma ou
+          chamar no WhatsApp para tirar dúvidas rápidas sobre o atendimento.
+        </p>
 
-          <div class="contact-card">
-            <p>
-              Você pode agendar diretamente pela plataforma ou chamar no WhatsApp para tirar dúvidas rápidas sobre o funcionamento
-              do atendimento.
-            </p>
-
-            <div class="contact-row">
-              <a href="https://ng.quarkclinic.com.br/app/profissional-saude/agendamentos" target="_blank" class="btn btn-primary">
-                <span class="btn-icon">📅</span>
-                Agendar consulta online
-              </a>
-              <a href="https://wa.me/5569984831097" target="_blank" class="btn btn-outline">
-                <span class="btn-icon">📲</span>
-                Falar no WhatsApp
-              </a>
-            </div>
-
-            <div class="contact-detail">
+        <div class="contact-grid">
+          <div class="card">
+            <h3>Agendamento e contato</h3>
+            <p class="text-muted">
               <strong>WhatsApp:</strong> +55 (69) 98483-1097
-            </div>
-            <div class="contact-detail">
+              <br />
               <strong>Região:</strong> Rondônia · Brasil
+            </p>
+
+            <div class="pill-list" style="margin-top: 10px">
+              <span>Atendimento humanizado</span>
+              <span>Plano progressivo e seguro</span>
+              <span>Foco em função e movimento</span>
             </div>
-            <div class="contact-detail">
-              Em casos de dor intensa e súbita, perda de força ou alterações importantes de sensibilidade, procure atendimento médico de urgência.
+
+            <div style="margin-top: 14px; display: flex; gap: 8px; flex-wrap: wrap">
+              <a
+                href="https://ng.quarkclinic.com.br/app/profissional-saude/agendamentos"
+                target="_blank"
+                class="btn btn-primary"
+                >Agendar consulta online</a
+              >
+              <a
+                href="https://wa.me/5569984831097"
+                target="_blank"
+                class="btn btn-outline"
+                >Falar no WhatsApp</a
+              >
             </div>
+
+            <p class="text-muted" style="margin-top: 10px; font-size: 11px">
+              Em casos de dor intensa e súbita, perda de força ou alterações
+              importantes de sensibilidade, procure atendimento médico de
+              urgência.
+            </p>
+          </div>
+
+          <div class="qr-card">
+            <div class="video-label">Aponte a câmera do celular</div>
+            <div class="qr-img">
+              <!-- troque o nome do arquivo da imagem se necessário -->
+              <img
+                src="qr-wilhasmar.png"
+                alt="QR Code para agendar consulta com Wilhasmar Ribeiro"
+              />
+            </div>
+            <p class="text-muted" style="font-size: 12px">
+              O QR Code leva direto para o canal de agendamento / WhatsApp.
+            </p>
           </div>
         </div>
+      </section>
+    </main>
 
-        <aside class="qr-card" aria-label="Atalho para agendamento por QR Code">
-          <!-- Substitua o src abaixo pelo seu QR Code atual -->
-          <img src="qr-code.png" alt="QR Code para agendar consulta com Wilhasmar Ribeiro">
-          <div class="qr-caption">Aponte a câmera do celular</div>
-          <div class="qr-note">
-            O QR Code leva direto para o canal de agendamento/WhatsApp.
-          </div>
-        </aside>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="container footer-row">
-      <div>
-        © <span id="year"></span> Wilhasmar Ribeiro · Quiropraxista.
-        <span>Todos os direitos reservados.</span>
-      </div>
-      <div>
-        Desenvolvido com cuidado ·
-        <a href="#inicio">Voltar ao topo ↑</a>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // Ano automático no rodapé
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Menu mobile
-    const navToggle = document.querySelector("[data-nav-toggle]");
-    const navContainer = document.querySelector(".topbar");
-
-    if (navToggle && navContainer) {
-      navToggle.addEventListener("click", function () {
-        navContainer.classList.toggle("nav-open");
-      });
-    }
-
-    // Fechar menu mobile ao clicar em link
-    document.querySelectorAll("[data-nav] a").forEach(function (link) {
-      link.addEventListener("click", function () {
-        navContainer.classList.remove("nav-open");
-      });
-    });
-  </script>
+    <footer>
+      <span>© Wilhasmar Ribeiro · Quiropraxista. Todos os direitos reservados.</span>
+      <a href="#topo">Voltar ao topo ↑</a>
+    </footer>
+  </div>
 </body>
 </html>
+
