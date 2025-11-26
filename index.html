@@ -496,6 +496,30 @@
       margin-top: 6px;
     }
 
+    /* GRADE DE VÍDEOS "ANTES E DEPOIS" */
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .video-card {
+      background: rgba(7, 9, 18, 0.96);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 10px;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.6);
+      font-size: 13px;
+    }
+
+    .video-card-title {
+      font-size: 13px;
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+
     /* Depoimentos */
 
     .testimonials {
@@ -619,6 +643,10 @@
 
       .grid-3,
       .testimonials {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .video-grid {
         grid-template-columns: minmax(0, 1fr);
       }
 
@@ -874,7 +902,7 @@
         </div>
       </section>
 
-      <!-- NA PRÁTICA / VÍDEO YOUTUBE (se quiser manter) -->
+      <!-- NA PRÁTICA / VÍDEO YOUTUBE -->
       <section id="pratica">
         <h2>Na prática · Assista a um caso real</h2>
         <p class="lead">
@@ -910,32 +938,80 @@
         </div>
       </section>
 
-      <!-- ANTES E DEPOIS -->
+      <!-- ANTES E DEPOIS – AGORA COM VÁRIOS VÍDEOS -->
       <section id="antes-depois">
         <h2>Antes e depois · Hérnia de Disco Cervical</h2>
         <p class="lead">
-          Comparação direta de mobilidade e dor antes e depois do procedimento
-          inicial em um caso de hérnia de disco cervical.
+          Comparação direta de mobilidade e dor antes e depois do início do
+          tratamento em casos de hérnia de disco e dor na coluna. Resultados
+          individuais podem variar de pessoa para pessoa.
         </p>
 
-        <div class="video-block">
-          <div class="video-label">Vídeo de evolução clínica</div>
-
-          <div class="frame-16x9">
-            <video controls>
-              <source src="2025-10-22-170540322.mp4" type="video/mp4" />
-              Seu navegador não suporta o vídeo.
-            </video>
+        <div class="video-grid">
+          <!-- VÍDEO 01 -->
+          <div class="video-card">
+            <div class="video-label">Antes e depois 01</div>
+            <div class="frame-16x9">
+              <video controls preload="metadata">
+                <!-- Renomeie o arquivo antigo para este nome no GitHub -->
+                <source src="video-antes-depois-01.mp4" type="video/mp4" />
+                Seu navegador não suporta o vídeo.
+              </video>
+            </div>
+            <div class="video-caption">
+              Caso clínico com melhora importante de mobilidade e redução de dor após o início do protocolo.
+            </div>
           </div>
 
-          <div class="video-caption">
-            Registro em vídeo da mudança clínica após o início do tratamento
-            cervical.
+          <!-- VÍDEO 02 -->
+          <div class="video-card">
+            <div class="video-label">Antes e depois 02</div>
+            <div class="frame-16x9">
+              <video controls preload="metadata">
+                <source src="video-antes-depois-02.mp4" type="video/mp4" />
+                Seu navegador não suporta o vídeo.
+              </video>
+            </div>
+            <div class="video-caption">
+              Evolução de paciente com dor lombar e irradiação, ao longo das primeiras sessões.
+            </div>
           </div>
+
+          <!-- VÍDEO 03 -->
+          <div class="video-card">
+            <div class="video-label">Antes e depois 03</div>
+            <div class="frame-16x9">
+              <video controls preload="metadata">
+                <source src="video-antes-depois-03.mp4" type="video/mp4" />
+                Seu navegador não suporta o vídeo.
+              </video>
+            </div>
+            <div class="video-caption">
+              Ganho de confiança para agachar, caminhar e realizar tarefas do dia a dia sem tanta dor.
+            </div>
+          </div>
+
+          <!-- PARA ADICIONAR MAIS VÍDEOS:
+          COPIE UM BLOCO ACIMA E TROQUE O NÚMERO FINAL -->
+
+          <!--
+          <div class="video-card">
+            <div class="video-label">Antes e depois 04</div>
+            <div class="frame-16x9">
+              <video controls preload="metadata">
+                <source src="video-antes-depois-04.mp4" type="video/mp4" />
+                Seu navegador não suporta o vídeo.
+              </video>
+            </div>
+            <div class="video-caption">
+              Descrição rápida do caso e da evolução.
+            </div>
+          </div>
+          -->
         </div>
 
         <div style="margin-top: 10px">
-          <!-- BOTÃO "QUERO AVALIAR MEU CASO" AGORA ABRE O MAPS -->
+          <!-- BOTÃO "QUERO AVALIAR MEU CASO" ABRE O MAPS -->
           <a
             href="https://maps.app.goo.gl/tk9RECTRZTWBPk6UA?g_st=aw"
             target="_blank"
